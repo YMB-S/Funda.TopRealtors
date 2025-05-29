@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Funda.TopRealtors.Core.services
+﻿namespace Funda.TopRealtors.Core
 {
     public interface ITopRealtorService
     {
-        public string Test();
+        public Task CalculateTopRealtorsAsync(int amountOfRealtorsToCalculate, int amountOfPagesToTraverse, int startPage = 1);
     }
 }

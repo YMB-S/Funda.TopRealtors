@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Funda.TopRealtors.Core.clients
+﻿namespace Funda.TopRealtors.Core
 {
     public interface IFundaApiClient
     {
-
+        public Task<FundaApiResponse> GetListingsAsync(int page, int pageSize);
     }
 }

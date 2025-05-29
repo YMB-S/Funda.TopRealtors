@@ -1,6 +1,4 @@
-﻿using Funda.TopRealtors.Core.clients;
-
-namespace Funda.TopRealtors.Core.services
+﻿namespace Funda.TopRealtors.Core
 {
     public class TopRealtorService : ITopRealtorService
     {
@@ -9,13 +7,21 @@ namespace Funda.TopRealtors.Core.services
         public TopRealtorService(IFundaApiClient apiClient)
         {
             ArgumentNullException.ThrowIfNull(apiClient, nameof(apiClient));
-
             this.apiClient = apiClient;
         }
 
-        public string Test()
+        public async Task CalculateTopRealtorsAsync(int amountOfRealtorsToCalculate, int amountOfPagesToTraverse, int startPage = 1)
         {
-            return "Working";
+            int pageSize = 25;
+
+            for (int currentPage = startPage; currentPage < (startPage + amountOfPagesToTraverse); currentPage++)
+            {
+                var response = await apiClient.GetListingsAsync(currentPage, pageSize);
+                foreach (var fundaObject in response.Objects)
+                {
+                    Console.WriteLine(fundaObject.MakelaarNaam);
+                }
+            }
         }
     }
 }
