@@ -2,6 +2,6 @@
 {
     public interface ITopRealtorService
     {
-        public Task CalculateTopRealtorsAsync(int amountOfRealtorsToCalculate, int amountOfPagesToTraverse, int startPage = 1);
+        public Task<List<Realtor>> CalculateTopRealtorsAsync(int amountOfRealtorsToCalculate, int amountOfPagesToTraverse, int startPage = 1);
     }
 }

@@ -9,7 +9,11 @@ internal class Program
         using var host = CreateHostBuilder(args).Build();
 
         var topRealtorService = host.Services.GetRequiredService<ITopRealtorService>();
-        await topRealtorService.CalculateTopRealtorsAsync(10, 1);
+        var topRealtors = await topRealtorService.CalculateTopRealtorsAsync(10, 4);
+        foreach (var realtor in topRealtors)
+        {
+            Console.WriteLine($"Name: {realtor.RealtorName}, listings: {realtor.AmountOfListings}");
+        }
     }
 
     private static IHostBuilder CreateHostBuilder(string[] args) =>

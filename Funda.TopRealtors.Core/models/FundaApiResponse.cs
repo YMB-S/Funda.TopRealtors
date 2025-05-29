@@ -6,7 +6,7 @@
 
         public class FundaObject
         {
-            public int MakelaarID { get; set; }
+            public int MakelaarId { get; set; }
             public string MakelaarNaam { get; set; }
         }
     }
