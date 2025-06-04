@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funda.TopRealtors.Core", "Funda.TopRealtors.Core\Funda.TopRealtors.Core.csproj", "{B754226C-C1A5-4CB3-823B-349BBA510255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funda.TopRealtors.Console", "Funda.TopRealtors.Console\Funda.TopRealtors.Console.csproj", "{90DC4B9A-DE5D-4E2C-ADD0-4FBD09408E68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funda.TopRealtors.RealtorConsole", "Funda.TopRealtors.Console\Funda.TopRealtors.RealtorConsole.csproj", "{90DC4B9A-DE5D-4E2C-ADD0-4FBD09408E68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

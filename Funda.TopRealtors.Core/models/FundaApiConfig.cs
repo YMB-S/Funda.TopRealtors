@@ -3,10 +3,12 @@
     public class FundaApiConfig
     {
         public string ApiKey { get; }
+        public int AmountOfRealtorsToRank { get; }
 
-        public FundaApiConfig(string apiKey)
+        public FundaApiConfig(string apiKey, int amountOfRealtorsToRank)
         {
             ApiKey = apiKey;
+            AmountOfRealtorsToRank = amountOfRealtorsToRank;
         }
     }
 }

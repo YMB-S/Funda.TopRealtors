@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Net.Http;
 using System.Text.Json;
 
@@ -18,8 +19,18 @@ namespace Funda.TopRealtors.Core
         public async Task<FundaApiResponse> GetListingsAsync(int page, int pageSize)
         {
             var url = $"http://partnerapi.funda.nl/feeds/Aanbod.svc/json/{this.apiKey}/?type=koop&zo=/amsterdam/&page={page}&pagesize={pageSize}";
+            return await this.GetListingsFromEndpointAsync(url);
+        }
 
-            var response = await this.httpClient.GetAsync(url);
+        public async Task<FundaApiResponse> GetListingsWithGardenAsync(int page, int pageSize)
+        {
+            var url = $"http://partnerapi.funda.nl/feeds/Aanbod.svc/json/{this.apiKey}/?type=koop&zo=/amsterdam/tuin/&page={page}&pagesize={pageSize}";
+            return await this.GetListingsFromEndpointAsync(url);
+        }
+
+        private async Task<FundaApiResponse> GetListingsFromEndpointAsync(string endpointUrl)
+        {
+            var response = await this.httpClient.GetAsync(endpointUrl);
             response.EnsureSuccessStatusCode();
 
             var json = await response.Content.ReadAsStringAsync();
