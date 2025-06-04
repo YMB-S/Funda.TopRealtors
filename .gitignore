@@ -1,5 +1,5 @@
-﻿Funda.TopRealtors.Core/obj
-Funda.TopRealtors.Console/obj
+﻿src/Funda.TopRealtors.Core/obj
+src/Funda.TopRealtors.Console/obj
 .vs
-Funda.TopRealtors.Core/bin
-Funda.TopRealtors.Console/bin
+src/Funda.TopRealtors.Core/bin
+src/Funda.TopRealtors.Console/bin
