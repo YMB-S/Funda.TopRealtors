@@ -20,3 +20,4 @@ I consulted two large language models (DeepSeek and ChatGPT) during design. They
 - [ ] Add unit tests
 - [ ] Add configuration for request throttling
 - [ ] Consider alternative presentation layers (e.g., web UI)
+- [ ] Add additional error handling (rate limiting, HTTP errors, etc)
